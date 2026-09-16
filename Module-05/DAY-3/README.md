@@ -1,79 +1,65 @@
-# Ex.No:5(C)    GETTER AND SETTER METHOD
-
+# Ex.No:5(D) IS-A RELATIONSHIP AND HAS-A RELATIONSHIP
 ## AIM:
-To Create a java program to print the sum of two number using getter and setter method.
-
+   To Create a java program to find factorial of number using class and object concepts and apply the has-a relationship.
+ 
 ## ALGORITHM :
-1.  Start the Program
-2.	Define class `Employee`:
--	a) Private variables `n1` and `n2`
--	b) Method `setsum(int n1, int n2)` to set values of `n1` and `n2`
--	c) Method `getsum()` to calculate and print `sum = n1 + n2`
+1.	Start the Program
+2.	Define class `A`:
+-	a) Declare integer `n` and initialize `fact` to 1
+-	b) Define method `factorial(int n)`:
+-	i) Set `this.n = n`
+-	ii) Use a loop from 1 to `n` to calculate `fact = fact * i`
+-	iii) Print "Factorial is:" followed by `fact`
 3.	In `main` class `main` method:
--	a) Use `Scanner` to read integers `n1` and `n2`
--	b) Create ` Employee ` object, set values, and call `getsum()`
+-	a) Use `Scanner` to read integer `n`
+-	b) Create an `A` object and call `factorial(n)`
 4.	End
-
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Getter and Setter using Java
+Program to implement a IS-A RELATIONSHIP AND HAS-A RELATIONSHIP using Java
 Developed by: Kavinraja D
 RegisterNumber: 212222240047
 */
 ```
 
 ## Sourcecode.java:
-
 ```
-import java.util.*;
-public class SetAndGet {
- 
- private int w;
- private int h;
-
-
-public int getWidth() {
- return w;
+import java.util.Scanner;
+class fun{
+    public static boolean isPal(String s)
+    {   
+        if(s.length() == 0 || s.length() == 1)
+            return true; 
+        if(s.charAt(0) == s.charAt(s.length()-1))
+        
+        return isPal(s.substring(1, s.length()-1));
+        return false;
+    }
 }
-
-public void setWidth(int w) {
- this.w = w;
-}
-
-public int getHeight() {
- return h;
-}
-
-public void setHeight(int h) {
- this.h = h;
-}
-
-
-public static void main(String args[]){
- Scanner sc=new Scanner(System.in);
- SetAndGet obj = new SetAndGet();
- int s1=sc.nextInt();
- int s2=sc.nextInt();
- 
- obj.setWidth(s1);
- obj.setHeight(s2);
- System.out.println(obj.getWidth() * obj.getHeight());
-
-}
-
-
+public class ArrayProgram {
+  public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        fun obj=new fun();
+        if(obj.isPal(string))
+            System.out.println(string + " is a palindrome");
+        else
+            System.out.println(string + " is not a palindrome");
+    
+  }
 }
 ```
+
+
+
+
+
+
 ## OUTPUT:
 
-<img width="500" alt="Image" src="https://github.com/user-attachments/assets/c241b933-57b2-460b-aed8-b047ef4645b0" />
+![Image](https://github.com/user-attachments/assets/9d66d86b-ed86-468e-bb2f-e029a7b0945e)
 
 ## RESULT:
-Thus the java program to print the sum of two number using getter and setter method was executed successfully.
-
-
-
-
-
+Thus the java program to find factorial of number using class and object concepts and apply the has-a relationship was executed successfully.
